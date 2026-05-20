@@ -1,4 +1,4 @@
-const BASE_URL = " https://kaim-kaar.onrender.com";
+const BASE_URL = "https://kaim-kaar.onrender.com";
 
 function logout(){
 
@@ -107,7 +107,7 @@ async function addService() {
         document.getElementById("categoryId").value;
 
     const response = await fetch(
-        "http://localhost:8080/provider/service",
+        "https://kaim-kaar.onrender.com/provider/service",
         {
             method: "POST",
 
