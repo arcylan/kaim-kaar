@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="auth-box glass">
+
+    <h1 class="title">Welcome Back</h1>
+
+    <p class="subtitle">
+      Login to continue
+    </p>
+
+    <input type="email"
+           id="loginEmail"
+           placeholder="Enter Email">
+
+    <input type="password"
+           id="loginPassword"
+           placeholder="Enter Password">
+
+    <button onclick="loginUser()">
+      Login
+    </button>
+
+    <button class="secondary-btn"
+            onclick="window.location.href='register.html'">
+
+      Create Account
+
+    </button>
+
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

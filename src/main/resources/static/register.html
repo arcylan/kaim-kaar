@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="auth-box glass">
+
+    <h1 class="title">Create Account</h1>
+
+    <p class="subtitle">
+      Join KAAR marketplace
+    </p>
+
+    <input type="text"
+           id="userName"
+           placeholder="Enter Username">
+
+    <input type="email"
+           id="email"
+           placeholder="Enter Email">
+
+    <input type="password"
+           id="password"
+           placeholder="Enter Password">
+
+    <select id="role">
+
+      <option value="">Select Role</option>
+
+      <option value="PROVIDER">
+        Provider
+      </option>
+
+      <option value="CUSTOMER">
+        Customer
+      </option>
+
+    </select>
+
+    <button onclick="registerUser()">
+      Register
+    </button>
+
+    <button class="secondary-btn"
+            onclick="window.location.href='login.html'">
+
+      Already have account?
+
+    </button>
+
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

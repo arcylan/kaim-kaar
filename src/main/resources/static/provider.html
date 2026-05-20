@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Provider Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+
+  <div class="logo">KAAR PROVIDER</div>
+
+  <button class="logout" onclick="logout()">
+    Logout
+  </button>
+
+</nav>
+
+<div class="container">
+
+  <h1 class="title">
+    Provider Dashboard
+  </h1>
+
+  <p class="subtitle">
+    Manage your services and bookings
+  </p>
+
+  <div class="glass">
+
+    <h2>Add Your Service</h2>
+
+    <input type="text"
+           id="description"
+           placeholder="Service Description">
+
+    <input type="number"
+           id="price"
+           placeholder="Price">
+
+    <input type="text"
+           id="location"
+           placeholder="Location">
+
+    <select id="categoryId">
+
+    </select>
+
+    <button onclick="addService()">
+      Add Service
+    </button>
+
+  </div>
+
+  <div style="margin-top:40px;">
+
+    <h2 style="margin-bottom:20px;">
+      Incoming Bookings
+    </h2>
+
+    <div id="bookingContainer" class="grid">
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
