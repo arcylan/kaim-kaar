@@ -84,12 +84,26 @@ public void bookService(Booking booking){
 
     bookingRepository.save(newBooking);
 
-    emailService.sendMail(provider.getProvider().getEmail(),
-            "NEW BOOKING RECIVED ",
-            "You RECIVED A NEW BOOKING FROM "
-    + customer.getUserName()+" Address "
-    + booking.getAddress()+" Phone "+
-    + booking.getPhoneNumber());
+    // Email to provider
+    emailService.sendMail(
+            provider.getProvider().getEmail(),
+            "New Booking Received - KaimKaar",
+            "Hello " + provider.getProvider().getUserName() + ",\n\n"
+                    + "New booking from: " + customer.getUserName() + "\n"
+                    + "Address: " + booking.getAddress() + "\n"
+                    + "Phone: " + booking.getPhoneNumber()
+    );
+
+// Email to customer
+    emailService.sendMail(
+            customer.getEmail(),
+            "Booking Confirmed - KaimKaar",
+            "Hello " + customer.getUserName() + ",\n\n"
+                    + "Your booking has been placed successfully!\n"
+                    + "Service: " + provider.getServiceCategory().getName() + "\n"
+                    + "Status: PENDING\n\n"
+                    + "- KaimKaar Team"
+    );
 }
 
     public List<BookingResponseDTO> getProviderBooking() {
